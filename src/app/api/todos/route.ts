@@ -10,7 +10,8 @@ export async function GET() {
 
     return NextResponse.json(todos);
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch todos' }, { status: 500 });
+    console.error("DB ERROR:", error); // Need to check terminal if this fails
+    return NextResponse.json({ error: 'Oops! Something went wrong while saving.' }, { status: 500 });
   }
 }
 

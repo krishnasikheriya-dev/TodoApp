@@ -86,10 +86,11 @@ export default function TodoApp() {
 
   const handleAddTodo = (e: React.FormEvent) => {
     e.preventDefault();
+    // console.log("Add button clicked!");
     if (!newTodoTitle.trim()) return;
 
     addMutation.mutate(newTodoTitle);
-    setNewTodoTitle("");
+    setNewTodoTitle(""); // clear the input
   };
 
   if (isLoading)
