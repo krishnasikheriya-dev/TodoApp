@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 
-// A lightweight type for our frontend usage
 type TodoType = {
   _id: string;
   title: string;
@@ -93,7 +92,6 @@ export default function TodoApp() {
     setNewTodoTitle("");
   };
 
-  // Uncomment when useQuery is implemented
   if (isLoading)
     return <div className="text-center mt-10">Loading todos...</div>;
   if (error)
@@ -104,7 +102,10 @@ export default function TodoApp() {
   return (
     <Card className="max-w-xl mx-auto mt-10 shadow-lg">
       <CardHeader>
-        <CardTitle className="text-center text-2xl">My To-Do List</CardTitle>
+        <CardTitle className="flex items-center justify-center gap-3 text-center text-2xl">
+          <img src="/logo.png" alt="Todo Logo" className="w-8 h-8 rounded" />
+          My To-Do List
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleAddTodo} className="flex gap-2 mb-6">

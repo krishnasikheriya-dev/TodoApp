@@ -2,6 +2,10 @@
 
 A full-stack Todo application built with modern web technologies.
 
+**Live Demo:** [https://todo-app-krishna-s-01.vercel.app/](https://todo-app-krishna-s-01.vercel.app/)
+
+![Todo App Screenshot](./public/Screenshot.png)
+
 ## Tech Stack
 
 - Next.js (App Router)
