@@ -1,7 +1,6 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface ITodo extends Document {
-
   title: string;
   completed: boolean;
   createdAt: Date;

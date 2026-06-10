@@ -38,5 +38,5 @@ export async function connectToDatabase() {
     }
   // 4. Return the connection.
 
-  return cached.conn; // Replace this with the actual connection
+  return cached.conn;
 }

@@ -94,10 +94,10 @@ export default function TodoApp() {
   };
 
   if (isLoading)
-    return <div className="text-center mt-10">Loading todos...</div>;
+    return <div className="text-3xl text-center mt-10">Loading todos...</div>;
   if (error)
     return (
-      <div className="text-center mt-10 text-red-500">Error loading todos</div>
+      <div className="text-3xl text-center mt-10 text-red-500">Error loading todos</div>
     );
 
   return (
