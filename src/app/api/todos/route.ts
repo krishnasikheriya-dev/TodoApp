@@ -10,7 +10,7 @@ export async function GET() {
 
     return NextResponse.json(todos);
   } catch (error) {
-    console.error("DB ERROR:", error); // Need to check terminal if this fails
+    console.error("DB ERROR:", error);
     return NextResponse.json({ error: 'Oops! Something went wrong while saving.' }, { status: 500 });
   }
 }
@@ -22,7 +22,6 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { title } = body;
 
-    // Ensure you validate the input before saving
     if(!title || typeof title !== 'string' || title.trim() === '') {
       return NextResponse.json({error: "Title is required"}, {status: 400})
     }
